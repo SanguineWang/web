@@ -17,6 +17,32 @@
             padding: 15px;
         }
 
+        input:not([name="sex"]){
+            width: 100%;
+            border-radius: 5px;
+        }
+        .sex-lable{
+            padding:5px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+
+        }
+        .form-input{
+              flex-basis: 80%;
+              display: flex;
+              flex-direction: row;
+              padding: 5px;
+              line-height: 25px;
+        }
+        .form-label {
+            flex-basis: 20%;
+            padding: 6px;
+            text-align: right;
+            line-height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -25,22 +51,22 @@
         <div class="form-group">
             <label class="form-label">用户名</label>
             <div class="form-input">
-                <input>
+                <input >
             </div>
         </div>
 
         <div class="form-group">
             <label class="form-label">密码</label>
             <div class="form-input">
-                <input>
+                <input >
             </div>
         </div>
 
         <div class="form-group">
             <label class="form-label">性别</label>
             <div class="form-input">
-                <input type="radio" name="sex">男
-                <input type="radio" name="sex">女
+             <lable class="sex-lable"><input type="radio" name="sex" >男</lable>
+                <lable class="sex-lable"><input type="radio" name="sex" >女</lable>
             </div>
         </div>
     </form>
