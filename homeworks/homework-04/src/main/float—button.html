@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <script src="resoures/js/jquery-3.4.1.min.js"></script>
+    <script>
+     $(function(){
+          $("#home").hover(function () {
+              $("#home>h2>a>i").css({
+                  'transform':'rotate(180deg)',
+                  'transition':'0.5s'
+              });
+              $("#fade").fadeToggle(500);
+          },function (){
+              $("#home>h2>a>i").css({
+                  'transform':'rotate(0)'
+              });
+              $("#fade").fadeOut(500);
+          })
+      })
+
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #0a0583;
+        }
+        .sidebar{
+            position: absolute;
+            text-align: center;
+            right: 0;
+            border-radius: 50%;
+        }
+        .sidebar ul{
+            list-style: none;
+        }
+        .sidebar h2 a i {
+            background-color: #375acb;
+            padding: 20px;
+            font-size: 24px;
+        }
+        i{
+            background-color: #03a9f4;
+            color: white;
+            padding: 6px;
+            margin: 6px;
+            border-radius: 50%;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="sidebar" id="home">
+    <h2><a href="#" ><i class="material-icons ">account_circle</i></a></h2>
+    <div id="fade" style="display: none">
+    <ul>
+        <li><a href="#" ><i class="material-icons" style="background-color: #03a9f4;font-size: 20px">edit</i></a></li>
+        <li><a href="#" ><i class="material-icons" style="background-color: #4CAF50;font-size: 20px">local_post_office</i></a></li>
+        <li><a href="#"><i class="material-icons" style="background-color: #FF0000;font-size: 20px">delete</i></a></li>
+
+    </ul>
+    </div>
+</div>
+</body>
+</html>

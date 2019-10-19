@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="resoures/css/bootstrap.css">
+    <script src="resoures/js/jquery-3.4.1.min.js"></script>
+    <script src="resoures/js/bootstrap.js"></script>
+    <script>
+        //点击按钮蒙半透明，再点击按钮或者透明地方取消
+        $(function () {
+            $("#btn").click(()=>{
+                $(".Mymodal").fadeIn(()=>{
+                    $(".black").click(()=>{
+                        $(".Mymodal").fadeOut();
+                    });
+                    $("#back").click(()=>{
+                        $(".Mymodal").fadeOut();
+                    })
+                });
+            });
+        })
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .footer a{
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #FF0000;
+            color: white;
+            border-radius: 7px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .footer a:hover {
+            background-color: #e30000;
+        }
+
+        .header{
+            margin: 10px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .container{
+            width: 100%;
+            text-align: left;
+            margin: 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .footer{
+            text-align: center;
+        }
+        .black{
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #dbdbdb;
+            opacity: 0.5;
+
+        }
+        .content{
+            position: absolute;
+            width: 400px;
+            height: 180px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow:  0 3px 9px rgba(0, 0, 0, .5);
+            margin: 10px;
+            left:30%;
+            top:0;
+            z-index: 2;
+            background-color: white;
+            opacity: 0.99;
+
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto aspernatur, deserunt distinctio facere minus necessitatibus possimus praesentium repudiandae voluptate. Accusantium deserunt distinctio doloremque doloribus eaque est laboriosam maiores placeat.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci alias amet animi at aut cum distinctio eveniet facilis fugit illo iste, iusto libero maxime odit pariatur quam quas repellendus sed similique veritatis voluptate voluptatibus! Ab accusamus ad aliquid aut doloremque eligendi et eveniet molestias mollitia, nemo odit officiis placeat possimus quas recusandae tenetur voluptate? Aspernatur autem dolorem eveniet minus nisi quam quos repellendus similique! Accusamus aspernatur dicta earum, eius fugiat hic iste labore nisi obcaecati perspiciatis praesentium rem sed, soluta temporibus totam. Ducimus fugiat mollitia quas similique veritatis voluptates? Autem commodi culpa deleniti dignissimos, hic in quas repellat reprehenderit?
+</div>
+<!--modal-->
+<div class="Mymodal" style=" display: none">
+<div class="content" >
+    <div class="header">
+        <h2>题目</h2>
+    </div>
+    <div class="container">
+        <h4>提交成功</h4>
+    </div>
+    <div class="footer">
+        <a href="#" id="back">关闭 </a>
+    </div>
+</div>
+<div class="black" ></div>
+</div>
+
+<button id="btn" class="btn btn-primary btn-lg">模拟模态框</button>
+
+</body>
+</html>
